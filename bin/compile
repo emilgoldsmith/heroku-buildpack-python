@@ -314,6 +314,7 @@ if [[ ! "$BUILD_DIR" == "/app" ]]; then
   deep-cp /app/.heroku/src "$BUILD_DIR/.heroku/src"
 fi
 
+printenv
 source "$BUILD_DIR/heroku_python_postinstall.sh"
 
 
