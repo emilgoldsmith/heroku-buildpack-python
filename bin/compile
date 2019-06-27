@@ -342,7 +342,7 @@ source "$BUILD_DIR/heroku_python_postinstall.sh"
 # These failures are intentional — if collectstatic (which can be tricky, at times) fails,
 # your build fails.
 (( start=$(nowms) ))
-source "$BIN_DIR/steps/collectstatic"
+sub_env "$BIN_DIR/steps/collectstatic"
 mtime "collectstatic.time" "${start}"
 
 
